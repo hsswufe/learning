@@ -42,7 +42,7 @@ class ValueNet(nn.Module):
     
 
 # 下面开始定义 Actor-Critic 算法
-class AC:
+class AC():
     def __init__(self, state_dim, hidden_dim, action_dim, gamma,device,lr=1e-3):
         self.policynet  = PolicyNet(state_dim, hidden_dim, action_dim)
         self.valuenet = ValueNet(state_dim, hidden_dim)
